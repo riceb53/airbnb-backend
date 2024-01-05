@@ -74,3 +74,5 @@ end
 gem 'jwt'
 
 gem 'rack-cors'
+
+gem 'date'
