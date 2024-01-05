@@ -33,7 +33,7 @@ Rails.application.routes.draw do
   get "/reviews" => "reviews#index"
   get "/reviews/:id" => "reviews#show"
   post "/reviews" => "reviews#create"
-  # patch "/reviews/:id" => "reviews#update"
+  patch "/reviews/:id" => "reviews#update"
   # delete "/reviews/id" => "reviews#destroy"
 
 end

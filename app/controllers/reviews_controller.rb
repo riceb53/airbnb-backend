@@ -23,18 +23,17 @@ class ReviewsController < ApplicationController
     end
   end
 
-  # def update
-  #   @user = User.find_by(id: params[:id])
-  #   @user.name = params[:name] || @user.name
-  #   @user.email = params[:email] || @user.email
-  #   @user.password = params[:password] || @user.password
-  #   @user.password_confirmation = params[:password_confirmation] || @user.password_confirmation
-  #   if @user.save
-  #     render :show
-  #   else
-  #     render json: {error: @user.errors.full_messages}, status: :unprocessable_entity
-  #   end
-  # end
+  def update
+    @review = Review.find_by(id: params[:id])
+    @review.reservation_id = params[:reservation_id] || @review.reservation_id
+    @review.rating = params[:rating] || @review.rating
+    @review.comment = params[:comment] || @review.comment
+    if @review.save
+      render :show
+    else
+      render json: {error: @review.errors.full_messages}, status: :unprocessable_entity
+    end
+  end
 
   # def destroy
   #   @user = User.find_by(id: params[:id])
