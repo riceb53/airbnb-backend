@@ -20,16 +20,6 @@ Rails.application.routes.draw do
   patch "/reservations/:id" => "reservations#update"
   delete "/reservations/:id" => "reservations#destroy"
 
-
-
-
-
-
-
-
-
-
-
   get "/reviews" => "reviews#index"
   get "/reviews/:id" => "reviews#show"
   post "/reviews" => "reviews#create"
