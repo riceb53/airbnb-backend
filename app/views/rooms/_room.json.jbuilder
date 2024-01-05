@@ -1,4 +1,4 @@
-
+json.id room.id
 json.address room.address
 json.city room.city
 json.state room.state
