@@ -20,4 +20,10 @@ Rails.application.routes.draw do
   patch "/reservations/:id" => "reservations#update"
   delete "/reservations/:id" => "reservations#destroy"
 
+  get "/images" => "room_images#index"
+  get "/images/:id" => "room_images#show"
+  post "/images" => "room_images#create"
+  patch "/images/:id" => "room_images#update"
+  delete "/images/:id" => "room_images#destroy"
+
 end

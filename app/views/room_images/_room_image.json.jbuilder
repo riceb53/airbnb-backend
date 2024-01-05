@@ -1,2 +1,4 @@
-json.extract! room_image, :id, :created_at, :updated_at
-json.url room_image_url(room_image, format: :json)
+json.id room_image.id
+json.room_id room_image.room_id
+json.url room_image.url
+
