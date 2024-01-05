@@ -35,10 +35,10 @@ class ReviewsController < ApplicationController
     end
   end
 
-  # def destroy
-  #   @user = User.find_by(id: params[:id])
-  #   @user.destroy
-  #   render json: {message: "User account deleted"}
-  # end
+  def destroy
+    @review = Review.find_by(id: params[:id])
+    @review.destroy
+    render json: {message: "Your review has been successfully deleted."}
+  end
 
 end
