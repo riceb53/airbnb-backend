@@ -4,25 +4,24 @@ class ReviewsController < ApplicationController
     render :index
   end
 
-  # def show
-  #   @user = User.find_by(id: params[:id])
-  #   render :show
-  # end
+  def show
+    @review = Review.find_by(id: params[:id])
+    render :show
+  end
   
-  # def create
-  #   user = User.new(
-  #     name: params[:name],
-  #     email: params[:email],
-  #     password: params[:password],
-  #     password_confirmation: params[:password_confirmation],
-  #     )
+  def create
+    review = Review.new(
+      reservation_id: params[:reservation_id],
+      rating: params[:rating],
+      comment: params[:comment],
+      )
 
-  #   if user.save
-  #     render json: {message: "User created succesfully"}, status: :created
-  #   else
-  #     render json: {errors: user.errors.full_messages}, status: :unprocessable_entity
-  #   end
-  # end
+    if review.save
+      render json: {message: "Thank you for your review. We appreciate your feedback!"}, status: :created
+    else
+      render json: {errors: user.errors.full_messages}, status: :unprocessable_entity
+    end
+  end
 
   # def update
   #   @user = User.find_by(id: params[:id])
