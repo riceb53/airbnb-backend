@@ -18,6 +18,6 @@ Rails.application.routes.draw do
   get "/reservations/:id" => "reservations#show"
   post "/reservations" => "reservations#create"
   patch "/reservations/:id" => "reservations#update"
-  delete "/reservations/id" => "reservations#destroy"
+  delete "/reservations/:id" => "reservations#destroy"
 
 end
